@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mutual Fund Investment Registration</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#222;
+overflow-x:hidden;
+}
+
+/* HERO SECTION */
+
+.hero{
+background:
+linear-gradient(rgba(6,20,52,0.85),rgba(6,20,52,0.9)),
+url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+padding:100px 20px;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:52px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+/* COMPANY NAME FIX */
+.hero-company{
+font-size:10px;
+line-height:1.4;
+margin-top:-5px;
+margin-bottom:18px;
+opacity:0.8;
+}
+
+.hero p{
+font-size:18px;
+max-width:750px;
+margin:auto;
+line-height:1.8;
+opacity:0.95;
+}
+
+.hero-btn{
+display:inline-block;
+margin-top:30px;
+padding:16px 34px;
+background:#ffcc00;
+color:#0b1f4d;
+font-weight:600;
+border-radius:50px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.hero-btn:hover{
+transform:translateY(-3px);
+}
+
+/* CONTAINER */
+
+.container{
+max-width:1050px;
+margin:-60px auto 60px;
+padding:0 20px;
+}
+
+/* FORM BOX */
+
+.form-box{
+background:white;
+padding:45px;
+border-radius:24px;
+box-shadow:0 15px 50px rgba(0,0,0,0.08);
+}
+
+.form-title{
+font-size:34px;
+color:#0b1f4d;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.form-description{
+color:#666;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+.section-title{
+font-size:24px;
+font-weight:600;
+color:#163b8f;
+margin:40px 0 25px;
+padding-bottom:10px;
+border-bottom:2px solid #edf2ff;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.form-group{
+margin-bottom:20px;
+}
+
+label{
+display:block;
+font-weight:500;
+margin-bottom:10px;
+}
+
+input,
+select{
+width:100%;
+padding:15px;
+border:1px solid #d7dbe8;
+border-radius:14px;
+font-size:15px;
+transition:0.3s;
+background:white;
+}
+
+input:focus,
+select:focus{
+outline:none;
+border-color:#163b8f;
+box-shadow:0 0 0 4px rgba(22,59,143,0.1);
+}
+
+.radio-group{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+margin-top:10px;
+}
+
+.radio-option{
+background:#f7f9ff;
+border:1px solid #dfe7ff;
+padding:12px 18px;
+border-radius:14px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.radio-option:hover{
+background:#edf2ff;
+}
+
+.radio-option input{
+width:auto;
+margin-right:8px;
+}
+
+/* UPLOAD */
+
+.upload-box{
+border:2px dashed #163b8f;
+padding:35px;
+border-radius:18px;
+background:#f8fbff;
+text-align:center;
+}
+
+.upload-box h4{
+margin-bottom:10px;
+color:#163b8f;
+}
+
+.upload-box p{
+font-size:14px;
+color:#666;
+margin-bottom:15px;
+}
+
+/* SUBMIT */
+
+.submit-btn{
+width:100%;
+padding:18px;
+background:linear-gradient(135deg,#163b8f,#0b1f4d);
+border:none;
+border-radius:16px;
+color:white;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+margin-top:25px;
+transition:0.3s;
+}
+
+.submit-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* TRUST SECTION */
+
+.trust-section{
+margin-top:50px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.trust-card{
+background:#f8fbff;
+padding:25px;
+border-radius:18px;
+text-align:center;
+}
+
+.trust-card h3{
+margin:15px 0 10px;
+color:#163b8f;
+}
+
+.trust-card p{
+font-size:14px;
+color:#666;
+line-height:1.7;
+}
+
+/* DISCLAIMER */
+
+.disclaimer{
+margin-top:45px;
+font-size:12px;
+line-height:1.8;
+color:#777;
+text-align:center;
+}
+
+/* FOOTER */
+
+.footer{
+background:#0b1f4d;
+color:white;
+padding:30px 20px;
+text-align:center;
+}
+
+.footer p{
+opacity:0.8;
+font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:34px;
+}
+
+.hero{
+padding:80px 20px;
+}
+
+.form-box{
+padding:25px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.trust-section{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Start Your Mutual Fund Investment Journey</h1>
+
+<p class="hero-company">
+with<br>
+Infinitum Experts Insurance Marketing Private Limited
+</p>
+
+<p>
+Secure your financial future with expert-guided mutual fund investment solutions tailored to your goals and long-term wealth creation.
+</p>
+
+<a href="#formSection" class="hero-btn">
+Register Now
+</a>
+
+</section>
+
+<!-- FORM -->
+
+<div class="container">
+
+<div class="form-box" id="formSection">
+
+<h2 class="form-title">
+Mutual Fund Investment Registration Form
+</h2>
+
+<p class="form-description">
+Thank you for your interest in mutual fund investments. Please fill out this form so our advisory team can understand your investment needs and contact you.
+</p>
+
+<form id="investmentForm">
+
+<!-- BASIC INFO -->
+<h3 class="section-title">Basic Client Information</h3>
+
+<div class="grid">
+
+<div class="form-group">
+<label>Full Name</label>
+<input type="text" required>
+</div>
+
+<div class="form-group">
+<label>Mobile Number</label>
+<input type="tel" required>
+</div>
+
+<div class="form-group">
+<label>Email Address</label>
+<input type="email" required>
+</div>
+
+<div class="form-group">
+<label>City</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Occupation</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Date of Birth</label>
+<input type="date">
+</div>
+
+</div>
+
+<!-- INVESTMENT PROFILE -->
+<h3 class="section-title">Investment Profile</h3>
+
+<div class="grid">
+
+<div class="form-group">
+<label>Investment Goal</label>
+<select>
+<option>Select</option>
+<option>Wealth Creation</option>
+<option>Tax Saving</option>
+<option>Retirement</option>
+<option>Child Education</option>
+<option>Regular Income</option>
+<option>Emergency Fund</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Investment Horizon</label>
+<select>
+<option>Select</option>
+<option>Less than 1 year</option>
+<option>1–3 years</option>
+<option>3–5 years</option>
+<option>5+ years</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Monthly Investment Capacity</label>
+<select>
+<option>Select</option>
+<option>₹1,000–₹5,000</option>
+<option>₹5,000–₹25,000</option>
+<option>₹25,000–₹1 lakh</option>
+<option>₹1 lakh+</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Preferred Investment Type</label>
+
+<div class="radio-group">
+<label class="radio-option"><input type="radio" name="investment"> SIP</label>
+<label class="radio-option"><input type="radio" name="investment"> Lump Sum</label>
+<label class="radio-option"><input type="radio" name="investment"> Both</label>
+</div>
+
+</div>
+
+</div>
+
+<!-- RISK PROFILE -->
+<h3 class="section-title">Risk Profile</h3>
+
+<div class="grid">
+
+<div class="form-group">
+<label>How would you react if your portfolio falls 15% temporarily?</label>
+<select>
+<option>Select</option>
+<option>Sell immediately</option>
+<option>Wait for recovery</option>
+<option>Invest more</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Risk Appetite</label>
+<div class="radio-group">
+<label class="radio-option"><input type="radio" name="risk"> Conservative</label>
+<label class="radio-option"><input type="radio" name="risk"> Moderate</label>
+<label class="radio-option"><input type="radio" name="risk"> Aggressive</label>
+</div>
+</div>
+
+</div>
+
+<!-- KYC -->
+<h3 class="section-title">KYC Status</h3>
+
+<div class="grid">
+
+<div class="form-group">
+<label>Are you KYC compliant?</label>
+<select>
+<option>Select</option>
+<option>Yes</option>
+<option>No</option>
+<option>Not Sure</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>PAN Available?</label>
+<select>
+<option>Select</option>
+<option>Yes</option>
+<option>No</option>
+</select>
+</div>
+
+</div>
+
+<!-- DOCUMENTS -->
+<h3 class="section-title">Document Upload</h3>
+
+<div class="grid">
+
+<div class="form-group">
+<label>PAN Card Upload</label>
+<div class="upload-box">
+<h4>Upload PAN Card</h4>
+<p>Upload clear copy of PAN Card</p>
+<input type="file">
+</div>
+</div>
+
+<div class="form-group">
+<label>Aadhaar Card Upload</label>
+<div class="upload-box">
+<h4>Upload Aadhaar Card</h4>
+<p>Upload clear copy of Aadhaar Card</p>
+<input type="file">
+</div>
+</div>
+
+<div class="form-group">
+<label>Cancelled Cheque Upload</label>
+<div class="upload-box">
+<h4>Upload Cancelled Cheque</h4>
+<p>Upload cancelled cheque copy</p>
+<input type="file">
+</div>
+</div>
+
+</div>
+
+<button type="submit" class="submit-btn">Submit Registration</button>
+
+</form>
+
+<!-- TRUST -->
+<div class="trust-section">
+
+<div class="trust-card">
+<h3>Expert Guidance</h3>
+<p>Get investment recommendations tailored to your financial goals and risk profile.</p>
+</div>
+
+<div class="trust-card">
+<h3>100% Secure</h3>
+<p>Your personal and financial information remains fully encrypted and confidential.</p>
+</div>
+
+<div class="trust-card">
+<h3>Easy Process</h3>
+<p>Complete your registration online within minutes with our smooth onboarding process.</p>
+</div>
+
+</div>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer">
+Mutual Fund investments are subject to market risks, read all scheme related documents carefully before investing. Past performance is not indicative of future returns.
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+<p>© 2026 Mutual Fund Advisory Services. All Rights Reserved.</p>
+</footer>
+
+<script>
+document.getElementById("investmentForm")
+.addEventListener("submit", function(e){
+e.preventDefault();
+alert("Thank You! Your registration has been submitted successfully.");
+});
+</script>
+
+</body>
+</html>
